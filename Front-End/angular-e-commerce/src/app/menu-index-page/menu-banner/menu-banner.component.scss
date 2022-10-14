@@ -1,0 +1,57 @@
+.banner-item {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    .banner-main {
+        .image-container {
+            width: 830px;
+            height: 320px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                opacity: 1;
+            }
+        }
+    }
+    .banner-right-side {
+        .rs-container {
+            margin-left: 6px;
+            display: flex;
+            flex-direction: column;
+            .rs-above {
+                width: 392px;
+                height: 157px;
+                overflow: hidden;
+                position: relative;
+                border-radius: 10px;
+                img {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    opacity: 1;
+                    height: 100%;
+                }
+            }
+            .rs-below {
+                margin-top: 6px;
+                width: 392px;
+                height: 157px;
+                overflow: hidden;
+                position: relative;
+                border-radius: 10px;
+                img {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    opacity: 1;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
