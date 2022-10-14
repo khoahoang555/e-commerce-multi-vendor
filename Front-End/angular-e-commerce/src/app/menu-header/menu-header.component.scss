@@ -1,0 +1,174 @@
+.header-container-desktop {
+    background-color: #ffffff;
+
+    .container {
+        .header-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 68px;
+
+            .header-logo {
+                margin-bottom: 6px;
+            }
+
+            .header-main-functions {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 40px;
+                margin-left: 24px;
+                .header-main-item {
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 15px;
+                    width: 72px;
+                    align-items: center;
+                    span {
+                        font-size: 15px;
+                    }
+
+                    .language-container {
+                        display: block;
+                        position: relative;
+                        height: 40px;
+                        border: 1px solid #808080;
+                        width: 70px;
+                        border-radius: 10px;
+                        .image-item {
+                            top: 50%;
+                            left: 50%;
+                            position: absolute;
+                            transform: translate(-50%, -50%);
+                            display: flex;
+                        }
+                    }
+                }
+            }
+
+            .header-category {             
+                .category-item {
+                    display: flex;
+                    justify-content: end;
+                    width: 100px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+::ng-deep {
+    .search-container {
+        width: 620px;
+        border: 1px solid #808080;
+        border-radius: 10px;
+        height: 40px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+
+        input {
+            height: 20px;
+            margin-left: 15px;
+            width: 525px;
+            border: none !important;
+            outline: none;
+        }
+
+        button {
+            height: 30px;
+            width: 70px;
+            border: none;
+            background-color: #C92127;
+            border-radius: 10px;
+            color: #ffffff;
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 1320px) {
+    .header-main-functions {
+        margin-left: 10px !important;
+        .header-main-item {
+            margin-left: 10px !important;
+            width: 64px !important;
+            span {
+                font-size: 13px !important;
+            }
+        }
+    }
+    .category-item {
+        width: 80px !important;
+    }
+}
+
+@media only screen and (max-width: 1270px) {
+    .header-main-functions {
+        margin-left: 5px !important;
+        .header-main-item {
+            margin-left: 5px !important;
+            width: 64px !important;
+            span {
+                font-size: 13px !important;
+            }
+        }
+    }
+    .category-item {
+        width: 70px !important;
+    }
+
+    .search-container {
+        width: 460px !important;
+        input {
+            width: 365px !important;
+        }
+    }
+}
+
+.header-container-mobile {
+    background-color: #C92127;
+    .header-item-mobile {
+        height: 86px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .header-logo-mobile {
+            img {
+                width: 130px;
+                height: 23px;
+            }    
+        }
+        .header-functions-mobile {
+            .functions-container {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                margin-top: 7px;
+                .function-item {
+                    .search-container-mobile {
+                        width: 600px;
+                        height: 40px;
+                        border: 1px solid #808080;
+                        border-radius: 5px;
+                        background-color: #ffffff;
+                        display: flex;
+                        justify-content: center;
+                        text-align: center;
+                        input {
+                            height: 20px;
+                            margin-left: 15px;
+                            width: 525px;
+                            border: none !important;
+                            outline: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+
