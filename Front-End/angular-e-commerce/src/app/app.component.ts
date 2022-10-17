@@ -1,10 +1,16 @@
 import { Component } from '@angular/core';
+// declare let $: any;
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
   title = 'angular-e-commerce';
+  constructor() {
+    // $('body').addClass('df');
+  }
 }
