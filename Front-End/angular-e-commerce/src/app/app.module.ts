@@ -7,6 +7,7 @@ import { MenuHeaderDesktopComponent } from './menu-header/menu-header-desktop/me
 import { MenuHeaderMobileComponent } from './menu-header/menu-header-mobile/menu-header-mobile.component';
 import { MenuIndexPageComponent } from './menu-index-page/menu-index-page.component';
 import { MenuBannerComponent } from './menu-index-page/menu-banner/menu-banner.component';
+import { MenuIconComponent } from './menu-index-page/menu-icon/menu-icon.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { MenuBannerComponent } from './menu-index-page/menu-banner/menu-banner.c
     MenuHeaderMobileComponent,
     MenuIndexPageComponent,
     MenuBannerComponent,
+    MenuIconComponent,
   ],
   imports: [
     BrowserModule
