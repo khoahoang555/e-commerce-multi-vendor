@@ -39,6 +39,15 @@ $(document).ready(function(){
         indexImg = index;
         changeImage();
     });
+
+    // $(window).resize(function () {
+    //     let win = $(this);
+    //     let height = win.height();
+    //     let width = win.width();
+    //     if (width < 980) {
+    //         console.log(width);
+    //     }
+    // });
 });
 
 
@@ -50,4 +59,38 @@ function nextImage() {
 function backImage() {
     indexImg--;
     changeImage();
+}
+
+window.onresize = function() {
+    let width = window.innerWidth;
+    console.log(width);
+    resizeBanner(width);
+}
+
+// $("#banner-resize").load(function() {
+//     console.log('this is first load');
+//     let width = window.innerWidth;
+//     resizeBanner(width);
+// });
+
+$(window).on('load', function(){
+    
+    let width = window.innerWidth;
+    console.log(width);
+    resizeBanner(width);
+});
+
+function resizeBanner(width) {
+    if (width < 770) {
+        let bannerWidth = width - 20 - 10;
+        let bannerHeight = width - 484;
+        //$(document).ready(function(){
+            //$("#banner-resize").width(bannerWidth);            
+        //});
+        $("#banner-resize").attr('style', `width: ${bannerWidth}px !important; 
+                                           height: ${bannerHeight}px !important`
+                                );
+    } else {
+        $("#banner-resize").removeAttr('style');
+    }
 }
