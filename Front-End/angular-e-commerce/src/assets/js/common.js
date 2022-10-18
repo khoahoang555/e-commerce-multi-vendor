@@ -39,15 +39,6 @@ $(document).ready(function(){
         indexImg = index;
         changeImage();
     });
-
-    // $(window).resize(function () {
-    //     let win = $(this);
-    //     let height = win.height();
-    //     let width = win.width();
-    //     if (width < 980) {
-    //         console.log(width);
-    //     }
-    // });
 });
 
 
@@ -62,41 +53,19 @@ function backImage() {
 }
 
 window.onresize = function() {
-    let width = window.innerWidth;
-    //console.log(width);
-    resizeBanner(width);
+    resizeBanner();
 }
 
-// $("#banner-resize").load(function() {
-//     console.log('this is first load');
-//     let width = window.innerWidth;
-//     resizeBanner(width);
-// });
-
-// $("#banner-resize").on('load', function(){
-    
-//     let width = window.innerWidth;
-//     console.log(width);
-//     resizeBanner(width);
-// });
-
 window.addEventListener('load', function () {
-    let width = window.innerWidth;
-    console.log(width);
-    resizeBanner(width);
+    resizeBanner();
 });
 
-function resizeBanner(width) {
+function resizeBanner() {
+    let width = Math.min(document.documentElement.clientWidth, window.innerWidth || 0);
     if (width < 750) {
-
         let bannerWidth = width - 40;
         let minusHeight = (750 - width) / 4; 
         let bannerHeight = 286 - minusHeight;
-        console.log(bannerHeight);
-        //let bannerHeight = 286;
-        //$(document).ready(function(){
-            //$("#banner-resize").width(bannerWidth);            
-        //});
         $("#banner-resize").attr('style', `width: ${bannerWidth}px !important; 
                                            height: ${bannerHeight}px !important`
                                 );

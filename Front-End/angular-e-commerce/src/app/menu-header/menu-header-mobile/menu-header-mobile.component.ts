@@ -7,6 +7,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 })
 export class MenuHeaderMobileComponent implements OnInit {
   searchWidth: number = 830;
+  math = Math;
 
   constructor() { }
 
@@ -16,7 +17,7 @@ export class MenuHeaderMobileComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   onResize() {
-    const innerWidth = window.innerWidth;
-    this.searchWidth = innerWidth - 150 - 10;
+    const width = this.math.min(document.documentElement.clientWidth, window.innerWidth || 0);
+    this.searchWidth = width - 150 - 10;
   }
 }
