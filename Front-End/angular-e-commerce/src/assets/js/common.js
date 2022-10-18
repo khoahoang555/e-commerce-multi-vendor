@@ -63,7 +63,7 @@ function backImage() {
 
 window.onresize = function() {
     let width = window.innerWidth;
-    console.log(width);
+    //console.log(width);
     resizeBanner(width);
 }
 
@@ -73,17 +73,27 @@ window.onresize = function() {
 //     resizeBanner(width);
 // });
 
-$(window).on('load', function(){
+// $("#banner-resize").on('load', function(){
     
+//     let width = window.innerWidth;
+//     console.log(width);
+//     resizeBanner(width);
+// });
+
+window.addEventListener('load', function () {
     let width = window.innerWidth;
     console.log(width);
     resizeBanner(width);
 });
 
 function resizeBanner(width) {
-    if (width < 770) {
-        let bannerWidth = width - 20 - 10;
-        let bannerHeight = width - 484;
+    if (width < 750) {
+
+        let bannerWidth = width - 40;
+        let minusHeight = (750 - width) / 4; 
+        let bannerHeight = 286 - minusHeight;
+        console.log(bannerHeight);
+        //let bannerHeight = 286;
         //$(document).ready(function(){
             //$("#banner-resize").width(bannerWidth);            
         //});
