@@ -8,6 +8,7 @@ import { MenuHeaderMobileComponent } from './menu-header/menu-header-mobile/menu
 import { MenuIndexPageComponent } from './menu-index-page/menu-index-page.component';
 import { MenuBannerComponent } from './menu-index-page/menu-banner/menu-banner.component';
 import { MenuIconComponent } from './menu-index-page/menu-icon/menu-icon.component';
+import { MenuFlashSaleComponent } from './menu-index-page/menu-flash-sale/menu-flash-sale.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { MenuIconComponent } from './menu-index-page/menu-icon/menu-icon.compone
     MenuIndexPageComponent,
     MenuBannerComponent,
     MenuIconComponent,
+    MenuFlashSaleComponent,
   ],
   imports: [
     BrowserModule

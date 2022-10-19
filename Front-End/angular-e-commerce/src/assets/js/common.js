@@ -1,5 +1,24 @@
 let indexImg = 0;
+let timeDelay = 2000;
+let autoRunSlide = null;
+let timer = null;
+
 changeImage();
+openInterval();
+
+function openInterval() {
+    autoRunSlide = setInterval(nextImage, timeDelay);
+}
+
+function delayInterval() {
+    if (autoRunSlide != null || timer != null) {
+        window.clearInterval(autoRunSlide);
+        window.clearTimeout(timer);
+        autoRunSlide = null;
+        timer = null;
+    }
+    timer = setTimeout(openInterval, 5000);
+}
 
 function changeImage() {
     $(document).ready(function(){
@@ -28,16 +47,19 @@ function changeImage() {
 $(document).ready(function(){
     $('#btn-next').on('click', function(event) {
         nextImage();
+        delayInterval();
     });
 
     $('#btn-back').on('click', function(event) {
         backImage();
+        delayInterval();
     });
 
     $('.carousel-number').on('click', '.carousel-item-img', function() {
         let index = $(this).index('.carousel-item-img');
         indexImg = index;
         changeImage();
+        delayInterval();
     });
 });
 
