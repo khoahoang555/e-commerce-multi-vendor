@@ -53,15 +53,18 @@ function backImage() {
 }
 
 window.onresize = function() {
-    resizeBanner();
+    let width = Math.min(document.documentElement.clientWidth, window.innerWidth || 0);
+    resizeBanner(width);
+    resizeIconContainer(width);
 }
 
 window.addEventListener('load', function () {
-    resizeBanner();
+    let width = Math.min(document.documentElement.clientWidth, window.innerWidth || 0);
+    resizeBanner(width);
+    resizeIconContainer(width);
 });
 
-function resizeBanner() {
-    let width = Math.min(document.documentElement.clientWidth, window.innerWidth || 0);
+function resizeBanner(width) {
     if (width < 750) {
         let bannerWidth = width - 40;
         let minusHeight = (750 - width) / 4; 
@@ -71,5 +74,15 @@ function resizeBanner() {
                                 );
     } else {
         $("#banner-resize").removeAttr('style');
+    }
+}
+
+function resizeIconContainer(width) {
+    console.log(width);
+    if (width < 750) {
+        let iconWidth = width - 40;
+        $(".common-container").attr('style', `width: ${iconWidth}px !important;`);
+    } else {
+        $(".common-container").removeAttr('style');
     }
 }
