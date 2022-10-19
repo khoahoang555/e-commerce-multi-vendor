@@ -18,6 +18,6 @@ export class MenuHeaderMobileComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize() {
     const width = this.math.min(document.documentElement.clientWidth, window.innerWidth || 0);
-    this.searchWidth = width - 150 - 10;
+    this.searchWidth = width - 112;
   }
 }

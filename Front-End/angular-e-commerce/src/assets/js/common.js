@@ -66,7 +66,7 @@ window.addEventListener('load', function () {
 
 function resizeBanner(width) {
     if (width < 750) {
-        let bannerWidth = width - 40;
+        let bannerWidth = width;
         let minusHeight = (750 - width) / 4; 
         let bannerHeight = 286 - minusHeight;
         $("#banner-resize").attr('style', `width: ${bannerWidth}px !important; 
@@ -80,7 +80,7 @@ function resizeBanner(width) {
 function resizeIconContainer(width) {
     console.log(width);
     if (width < 750) {
-        let iconWidth = width - 40;
+        let iconWidth = width;
         $(".common-container").attr('style', `width: ${iconWidth}px !important;`);
     } else {
         $(".common-container").removeAttr('style');
