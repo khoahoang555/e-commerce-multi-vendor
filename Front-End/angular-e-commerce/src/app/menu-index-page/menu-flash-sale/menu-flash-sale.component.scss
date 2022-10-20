@@ -1,93 +1,3 @@
-// .flash-sale-container {
-//     margin-top: 20px;
-//     .flash-sale-header {
-//         display: flex;
-//         background-color: #fcdab0;
-//         align-items: center;
-//         border-radius: 10px 10px 0px 0px;
-//         flex-flow: row wrap;
-//         .fl-content {
-//             display: flex;
-//             padding: 10px 0px 10px 10px;
-//             .fl-icon {
-//                 position: relative;
-//                 overflow: hidden;
-//                 width: 26px;
-//                 height: 26px;
-//                 img {
-//                     position: absolute;
-//                     width: 100%;
-//                     height: 100%;
-//                     top: 0;
-//                     left: 0;
-//                 }
-//             }
-//             .fl-title {
-//                 margin-left: 10px;              
-//                 height: 26px;
-//                 width: 91px;
-//                 position: relative;
-//                 span {
-//                     position: absolute;
-//                     top: 50%;
-//                     left: 50%;
-//                     transform: translate(-50%, -50%);
-//                     width: 100%;
-//                     font-weight: bold;
-//                 }              
-//             }
-//         }
-//         .fl-seperate {
-//             .seperate {
-//                 width: 2px;
-//                 height: 20px;
-//                 background-color: #000000;
-//                 margin: 0px 5px;
-//             }
-//         }
-//         .fl-text {
-//             height: 26px;
-//             span {
-//                 font-size: 15px;
-//             }
-//         }
-//         .fl-time {
-//             display: flex;
-//             .time {
-//                 background-color: #ffffff;
-//                 width: 32px;
-//                 height: 26px;
-//                 border-radius: 5px;
-//                 position: relative;
-//                 margin: 0px 5px;
-//                 span {
-//                     position: absolute;
-//                     color: #000000;
-//                     font-size: 13px;
-//                     font-weight: bold;
-//                     top: 50%;
-//                     left: 50%;
-//                     transform: translate(-50%, -50%);
-//                 }
-//             }
-//         }
-//     }
-// }
-
-// @media screen and (max-width: 370px) {
-//     .flash-sale-header {
-//         -webkit-justify-content: center;
-//     }
-//     .fl-text {
-//         display: none;
-//     }
-//     .fl-seperate {
-//         .seperate {
-//             margin: 0px 0px 0px 5px !important;
-//         }
-//     }
-// }
-
 .flash-sale-container {
     margin-top: 20px;
     .flash-sale-header {
@@ -116,7 +26,7 @@
             .title {
                 position: relative;
                 height: 26px;
-                width: 91px;
+                width: 93px;
                 span {
                     position: absolute;
                     width: 100%;
@@ -147,7 +57,7 @@
             .text {
                 position: relative;
                 height: 26px;
-                width: 89px;
+                width: 92px;
                 span {
                     position: absolute;
                     width: 100%;
