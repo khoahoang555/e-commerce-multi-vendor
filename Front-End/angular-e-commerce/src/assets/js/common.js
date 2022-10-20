@@ -1,5 +1,5 @@
 let indexImg = 0;
-let timeDelay = 2000;
+let timeDelay = 3000;
 let autoRunSlide = null;
 let timer = null;
 
@@ -100,7 +100,6 @@ function resizeBanner(width) {
 }
 
 function resizeIconContainer(width) {
-    console.log(width);
     if (width < 750) {
         let iconWidth = width;
         $(".common-container").attr('style', `width: ${iconWidth}px !important;`);
