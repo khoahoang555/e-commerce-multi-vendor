@@ -9,6 +9,7 @@ import { MenuIndexPageComponent } from './menu-index-page/menu-index-page.compon
 import { MenuBannerComponent } from './menu-index-page/menu-banner/menu-banner.component';
 import { MenuIconComponent } from './menu-index-page/menu-icon/menu-icon.component';
 import { MenuFlashSaleComponent } from './menu-index-page/menu-flash-sale/menu-flash-sale.component';
+import { CardItemComponent } from './card-item/card-item.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { MenuFlashSaleComponent } from './menu-index-page/menu-flash-sale/menu-f
     MenuBannerComponent,
     MenuIconComponent,
     MenuFlashSaleComponent,
+    CardItemComponent,
   ],
   imports: [
     BrowserModule
