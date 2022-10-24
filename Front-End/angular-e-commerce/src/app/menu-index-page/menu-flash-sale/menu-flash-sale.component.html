@@ -40,13 +40,11 @@
 
         <div class="flash-sale-body">
             <div class="fl-body-grid">
-                <app-card-item></app-card-item>
-                <app-card-item></app-card-item>
-                <app-card-item></app-card-item>
-                <app-card-item></app-card-item>
-                <app-card-item></app-card-item>
+                <app-card-item *ngFor="let item of arrDemo" [product]="item"></app-card-item>
+            </div>
+            <div class="fl-body-btn">
+                <button class="body-btn">Xem thêm</button>
             </div>
         </div>
-
     </div>
 </div>

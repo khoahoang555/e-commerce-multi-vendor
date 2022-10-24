@@ -97,12 +97,42 @@
 
     .flash-sale-body {
         background-color: #ffffff;
-        padding: 10px;
+        padding: 10px 5px;
         border-radius: 0px 0px 10px 10px;
         .fl-body-grid {
             display: flex;
+            overflow: hidden;
+        }
+        .fl-body-btn {
+            position: relative;
+            margin-top: 10px;
+            height: 70px;
+            .body-btn {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 220px;
+                height: 44px;
+                border-radius: 20px;
+                //background: linear-gradient(90deg, rgba(255,152,0,1) 0%, rgba(247,105,93,1) 100%);
+                background: #ffffff;
+                //border: 3px solid #c92127;
+                border: 2px solid #F8BA3B;
+                color: #F8BA3B;
+                font-weight: bold;
+            }
         }
     }
+}
+
+::ng-deep {
+    .body-btn:hover {
+        color: #ffffff !important;
+        background: linear-gradient(90deg, rgba(255,152,0,1) 0%, rgba(247,105,93,1) 100%) !important;
+        border: none !important;
+    }
+    
 }
 
 @media screen and (max-width: 370px) {
