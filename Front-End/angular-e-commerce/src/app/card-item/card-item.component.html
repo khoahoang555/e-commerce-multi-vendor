@@ -1,22 +1,24 @@
 <div class="card-container">
     <div class="card-item">
         <div class="card-item-img">
-            <img src="assets/image/common/flash-sale/pexels-pixabay-45853.jpg">
+            <a href="">
+                <img src="assets/image/common/flash-sale/pexels-pixabay-45853.jpg">
+            </a>
         </div>
         <div class="card-item-content">
             <div class="card-item-name">
-                <a href="">{{product}}</a>
+                <a href="">{{product.name}}</a>
             </div>
             <div class="card-item-price">
                 <div class="item-price">
-                    <span>26.600 đ</span>
+                    <span>{{product.price}} đ</span>
                 </div>
                 <div class="item-stock">
-                    <span>-30%</span>
+                    <span>-{{product.discountNumber}}%</span>
                 </div>
             </div>
             <div class="card-item-price-stock">
-                <span><del>67.000 đ</del></span>
+                <span><del>{{product.discountPrice}} đ</del></span>
             </div>
             <div class="card-item-rating">
                 <div class="item-img">
@@ -37,16 +39,17 @@
                 <div class="item-total">
                     <span>(5)</span>
                 </div>
-                <div class="item-separate">
-                </div>
-                <!-- <div class="item-sold">
-                    <span>Đã bán +1000</span>
-                </div> -->
             </div>
-            <div class="card-item-btn">
+            <!-- <div class="card-item-btn">
                 <div class="btn-item">
                     <div class="btn-img"></div>
                     <span>Thêm vào giỏ hàng</span>
+                </div>
+            </div> -->
+            <div class="card-item-progress">
+                <div class="item-progress"></div>
+                <div class="item-text">
+                    Đã bán {{product.sold}}
                 </div>
             </div>
         </div>
