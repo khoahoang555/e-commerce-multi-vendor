@@ -1,5 +1,6 @@
 .flash-sale-container {
     margin-top: 20px;
+    position: relative;
     .flash-sale-header {
         display: flex;
         flex-flow: row wrap;
@@ -95,14 +96,59 @@
         }
     }
 
+    .flash-sale-direction {
+        .direct-back {
+            position: absolute;
+            width: 34px;
+            height: 34px;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            border: 1px solid #dedede;
+            z-index: 2;
+            border-radius: 50%;
+            background-color: #dedede;
+            opacity: 0.7;
+            a {
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .direct-next {
+            position: absolute;
+            width: 34px;
+            height: 34px;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            border: 1px solid #dedede;
+            z-index: 2;
+            border-radius: 50%;
+            background-color: #dedede;
+            opacity: 0.7;
+            a {
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
     .flash-sale-body {
         background-color: #ffffff;
         padding: 10px 5px;
         border-radius: 0px 0px 10px 10px;
-        .fl-body-grid {
-            display: flex;
+        .fl-body-container {
+            width: 100%;
             overflow: hidden;
-        }
+            .fl-body-grid {
+                display: flex;
+                
+            }
+        }      
         .fl-body-btn {
             position: relative;
             margin-top: 10px;
@@ -114,12 +160,12 @@
                 transform: translate(-50%, -50%);
                 width: 220px;
                 height: 44px;
-                border-radius: 20px;
+                border-radius: 10px;
                 //background: linear-gradient(90deg, rgba(255,152,0,1) 0%, rgba(247,105,93,1) 100%);
                 background: #ffffff;
                 //border: 3px solid #c92127;
-                border: 2px solid #F8BA3B;
-                color: #F8BA3B;
+                border: 2px solid #c92127;
+                color: #c92127;
                 font-weight: bold;
             }
         }
@@ -129,10 +175,15 @@
 ::ng-deep {
     .body-btn:hover {
         color: #ffffff !important;
-        background: linear-gradient(90deg, rgba(255,152,0,1) 0%, rgba(247,105,93,1) 100%) !important;
+        background: #c92127 !important;
         border: none !important;
     }
-    
+    .direct-back:hover {
+        opacity: 1 !important;
+    }
+    .direct-next:hover {
+        opacity: 1 !important;
+    }
 }
 
 @media screen and (max-width: 370px) {

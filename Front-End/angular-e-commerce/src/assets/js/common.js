@@ -55,6 +55,14 @@ $(document).ready(function(){
         delayInterval();
     });
 
+    $('#btn-back-fl').on('click', function(event) {
+        backEventFL();
+    });
+
+    $('#btn-next-fl').on('click', function(event) {
+        nextEventFL();
+    });
+
     $('.carousel-number').on('click', '.carousel-item-img', function() {
         let index = $(this).index('.carousel-item-img');
         indexImg = index;
@@ -62,7 +70,6 @@ $(document).ready(function(){
         delayInterval();
     });
 });
-
 
 function nextImage() {
     indexImg++;
@@ -72,6 +79,17 @@ function nextImage() {
 function backImage() {
     indexImg--;
     changeImage();
+}
+
+let firstLocation = 0;
+function nextEventFL() {
+    firstLocation += 244;
+    $(".fl-body-grid").attr("style", `transform: translate3d(-${firstLocation}px, 0, 0)`);
+}
+
+function backEventFL() {
+    firstLocation -= 244;
+    $(".fl-body-grid").attr("style", `transform: translate3d(-${firstLocation}px, 0, 0)`);
 }
 
 window.onresize = function() {

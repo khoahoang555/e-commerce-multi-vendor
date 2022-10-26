@@ -11,33 +11,24 @@
             </div>
             <div class="card-item-price">
                 <div class="item-price">
-                    <span>{{product.price}} đ</span>
+                    <span>{{product.price | number}} đ</span>
                 </div>
-                <div class="item-stock">
+                <div class="item-stock" *ngIf="product.discountNumber">
                     <span>-{{product.discountNumber}}%</span>
                 </div>
             </div>
             <div class="card-item-price-stock">
-                <span><del>{{product.discountPrice}} đ</del></span>
+                <span *ngIf="product.discountPrice"><del>{{product.discountPrice | number}} đ</del></span>
             </div>
             <div class="card-item-rating">
-                <div class="item-img">
+                <div class="item-img" *ngFor="let i of startRatingLoop(product.rating)">
                     <img src="assets/image/common/icon/ico_star_yellow.svg">
                 </div>
-                <div class="item-img">
-                    <img src="assets/image/common/icon/ico_star_yellow.svg">
-                </div>
-                <div class="item-img">
-                    <img src="assets/image/common/icon/ico_star_yellow.svg">
-                </div>
-                <div class="item-img">
-                    <img src="assets/image/common/icon/ico_star_yellow.svg">
-                </div>
-                <div class="item-img">
-                    <img src="assets/image/common/icon/ico_star_yellow.svg">
+                <div class="item-img" *ngFor="let i of startRatingLoop(5 - product.rating)">
+                    <img src="assets/image/common/icon/ico_star_gray.svg">
                 </div>
                 <div class="item-total">
-                    <span>(5)</span>
+                    <span>({{product.totalRating}})</span>
                 </div>
             </div>
             <!-- <div class="card-item-btn">
@@ -47,7 +38,7 @@
                 </div>
             </div> -->
             <div class="card-item-progress">
-                <div class="item-progress"></div>
+                <div class="item-progress" [style.width]="product.progress + '%'"></div>
                 <div class="item-text">
                     Đã bán {{product.sold}}
                 </div>

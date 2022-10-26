@@ -38,9 +38,24 @@
             </div>
         </div>
 
+        <div class="flash-sale-direction">
+            <div class="direct-back">
+                <a id="btn-back-fl">
+                    <img src="assets/image/common/icon/fa-angle-left_32_8_8e8c8c_none.png" alt="">
+                </a>
+            </div>
+            <div class="direct-next">
+                <a id="btn-next-fl">
+                    <img src="assets/image/common/icon/fa-angle-right_32_8_8e8c8c_none.png" alt="">
+                </a>
+            </div>
+        </div>
+
         <div class="flash-sale-body">
-            <div class="fl-body-grid">
-                <app-card-item *ngFor="let item of arrDemo" [product]="item"></app-card-item>
+            <div class="fl-body-container">
+                <div class="fl-body-grid">
+                    <app-card-item *ngFor="let item of arrDemo" [product]="item"></app-card-item>
+                </div>
             </div>
             <div class="fl-body-btn">
                 <button class="body-btn">Xem thêm</button>

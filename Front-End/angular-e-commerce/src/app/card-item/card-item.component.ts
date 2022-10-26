@@ -14,4 +14,8 @@ export class CardItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  startRatingLoop(start: number) {
+    return new Array(start);
+  }
+
 }
