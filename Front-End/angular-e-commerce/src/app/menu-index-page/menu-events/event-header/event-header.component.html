@@ -1,0 +1,38 @@
+<div class="event-header" [style.background-color]="headerColor">
+    <div class="event-logo" *ngIf="itemEvent.type == 1 || itemEvent.type == 2">
+        <div class="image">
+            <img [src]="itemEvent.image">
+        </div>
+    </div>
+    <div class="event-title">
+        <!-- <div class="title"> -->
+        <span>{{itemEvent.title}}</span>
+        <!-- </div> -->
+    </div>
+    <div class="event-separate" *ngIf="itemEvent.type == 1">
+        <div class="separate">
+            <div class="content"></div>
+        </div>
+    </div>
+    <div class="event-text" *ngIf="itemEvent.type == 1">
+        <div class="text">
+            <span>Kết Thúc Trong</span>
+        </div>
+    </div>
+    <div class="event-time" *ngIf="itemEvent.type == 1">
+        <div class="time-container">
+            <input id="timeEvent" type="hidden">
+            <div class="time">
+                <span id="hour"></span>
+            </div>
+            <span>:</span>
+            <div class="time">
+                <span id="minute"></span>
+            </div>
+            <span>:</span>
+            <div class="time">
+                <span id="second"></span>
+            </div>
+        </div>
+    </div>
+</div>

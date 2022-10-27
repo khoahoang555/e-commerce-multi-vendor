@@ -1,13 +1,4 @@
 export class ItemInfo {
-    // name: string;
-    // price: number;
-    // discountNumber: number;
-    // discountPrice: number;
-    // rating: number;
-    // totalRating: number;
-    // sold: number;
-    // image?: string;
-
     constructor(
         public name: string, 
         public price: number,  

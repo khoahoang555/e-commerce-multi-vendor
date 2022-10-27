@@ -23,16 +23,17 @@
             </div>
             <div class="fl-time">
                 <div class="time-container">
+                    <input id="timeEvent" type="hidden" [(ngModel)]="timeEvent">
                     <div class="time">
-                        <span>01</span>
+                        <span id="hour"></span>
                     </div>
                     <span>:</span>
                     <div class="time">
-                        <span>30</span>
+                        <span id="minute"></span>
                     </div>
                     <span>:</span>
                     <div class="time">
-                        <span>30</span>
+                        <span id="second"></span>
                     </div>
                 </div>
             </div>

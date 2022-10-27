@@ -8,6 +8,7 @@ import {ItemInfo} from 'src/app/class/models/ItemInfo';
 })
 export class MenuFlashSaleComponent implements OnInit {
   arrDemo: ItemInfo[] = [];
+  timeEvent: string = "2022-10-28 15:30:27";
 
   constructor() { }
 
@@ -27,6 +28,15 @@ export class MenuFlashSaleComponent implements OnInit {
       ),
       new ItemInfo(
         'Kaguya-Sama: Cuộc Chiến Tỏ Tình - Tập 3 - Tặng Kèm 1 Trong 2 Mẫu Thẻ Học Sinh', 61000, 4, 11, 25, 10, 11, 71000
+      ),
+      new ItemInfo(
+        'Thám Tử Lừng Danh Conan - Tập 99', 33000, 2, 3, 11, 5, 15, 50000
+      ),
+      new ItemInfo(
+        'Thám Tử Lừng Danh Conan - Tập 99', 33000, 2, 3, 11, 5, 15, 50000
+      ),
+      new ItemInfo(
+        'Thám Tử Lừng Danh Conan - Tập 99', 33000, 2, 3, 11, 5, 15, 50000
       ),
       new ItemInfo(
         'Thám Tử Lừng Danh Conan - Tập 99', 33000, 2, 3, 11, 5, 15, 50000

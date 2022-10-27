@@ -36,11 +36,13 @@
                     text-decoration: none;
                     color: #000000;
                     font-size: 15px;
-                    min-width: 212px;
-                    min-height: 45px;
-                    max-height: 45px;
+                    width: 212px;
+                    height: 45px;
                     overflow: hidden;
-                    display: block;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2; /* after 2 line show ... */
+                    -webkit-box-orient: vertical;
                 }
             }
             .card-item-price {

@@ -11,6 +11,9 @@ import { MenuIconComponent } from './menu-index-page/menu-icon/menu-icon.compone
 import { MenuFlashSaleComponent } from './menu-index-page/menu-flash-sale/menu-flash-sale.component';
 import { CardItemComponent } from './card-item/card-item.component';
 import { FormsModule } from '@angular/forms';
+import { MenuEventsComponent } from './menu-index-page/menu-events/menu-events.component';
+import { EventHeaderComponent } from './menu-index-page/menu-events/event-header/event-header.component';
+import { EventDirectionComponent } from './menu-index-page/menu-events/event-direction/event-direction.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,9 @@ import { FormsModule } from '@angular/forms';
     MenuIconComponent,
     MenuFlashSaleComponent,
     CardItemComponent,
+    MenuEventsComponent,
+    EventHeaderComponent,
+    EventDirectionComponent,
   ],
   imports: [
     BrowserModule,

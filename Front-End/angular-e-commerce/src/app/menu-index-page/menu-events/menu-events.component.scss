@@ -1,0 +1,19 @@
+.event-container {
+    margin-top: 20px;
+    position: relative;
+}
+
+::ng-deep {
+    .body-btn:hover {
+        color: #ffffff !important;
+        background: #c92127 !important;
+        border: none !important;
+    }
+    .direct-back:hover {
+        opacity: 1 !important;
+    }
+    .direct-next:hover {
+        opacity: 1 !important;
+    }
+}
+

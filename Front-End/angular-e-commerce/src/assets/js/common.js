@@ -3,9 +3,12 @@ let timeDelay = 3000;
 let autoRunSlide = null;
 let timer = null;
 let sliderIndex = 0;
+let timeEvent = 0;
 
 changeImage();
 openInterval();
+getTimeEvent();
+startTimeEvent();
 
 function openInterval() {
     autoRunSlide = setInterval(nextImage, timeDelay);
@@ -137,7 +140,7 @@ function disableBtnNextFL() {
         let widthCommonContainer = $(".common-container").width();
         let widthTotalItem = getTotalWidthItemFL();
         
-        if ((widthCommonContainer + sliderIndex) >= widthTotalItem) {
+        if (((widthCommonContainer + sliderIndex) >= widthTotalItem) || (widthTotalItem == 0)) {
             $(".direct-next").attr("style", "display: none;");
         }
     });  
@@ -166,3 +169,28 @@ function enableBtnBackFL() {
 function getTotalWidthItemFL() {
     return $(".card-container").length * 244;
 }
+
+function getTimeEvent() {
+    $(document).ready(function(){
+        let time = $("#timeEvent").val();
+        timeEvent = new Date(time).getTime();
+    });
+}
+
+function startTimeEvent() {
+    var startEvent = setInterval(() => {
+        let now = new Date().getTime();
+        var distance = timeEvent - now;
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        $(document).ready(function(){
+            $("#hour").text(String(hours).length < 2 ? '0' + hours : hours);
+            $("#minute").text(String(minutes).length < 2 ? '0' + minutes : minutes);
+            $("#second").text(String(seconds).length < 2 ? '0' + seconds : seconds)
+        });
+    }, 1000);
+}
+
+
+
