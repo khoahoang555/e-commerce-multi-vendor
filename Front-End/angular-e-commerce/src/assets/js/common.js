@@ -2,6 +2,7 @@ let indexImg = 0;
 let timeDelay = 3000;
 let autoRunSlide = null;
 let timer = null;
+let sliderIndex = 0;
 
 changeImage();
 openInterval();
@@ -81,17 +82,6 @@ function backImage() {
     changeImage();
 }
 
-let firstLocation = 0;
-function nextEventFL() {
-    firstLocation += 244;
-    $(".fl-body-grid").attr("style", `transform: translate3d(-${firstLocation}px, 0, 0)`);
-}
-
-function backEventFL() {
-    firstLocation -= 244;
-    $(".fl-body-grid").attr("style", `transform: translate3d(-${firstLocation}px, 0, 0)`);
-}
-
 window.onresize = function() {
     let width = Math.min(document.documentElement.clientWidth, window.innerWidth || 0);
     resizeBanner(width);
@@ -102,6 +92,8 @@ window.addEventListener('load', function () {
     let width = Math.min(document.documentElement.clientWidth, window.innerWidth || 0);
     resizeBanner(width);
     resizeIconContainer(width);
+    disableBtnBackFL();
+    disableBtnNextFL();
 });
 
 function resizeBanner(width) {
@@ -124,4 +116,53 @@ function resizeIconContainer(width) {
     } else {
         $(".common-container").removeAttr('style');
     }
+}
+
+function nextEventFL() {
+    sliderIndex += 244;
+    $(".fl-body-grid").attr("style", `transform: translate3d(-${sliderIndex}px, 0, 0)`);
+    enableBtnBackFL();
+    disableBtnNextFL();
+}
+
+function backEventFL() {
+    sliderIndex -= 244;
+    $(".fl-body-grid").attr("style", `transform: translate3d(-${sliderIndex}px, 0, 0)`);
+    enableBtnNextFL();
+    disableBtnBackFL();
+}
+
+function disableBtnNextFL() {
+    $(document).ready(function(){
+        let widthCommonContainer = $(".common-container").width();
+        let widthTotalItem = getTotalWidthItemFL();
+        
+        if ((widthCommonContainer + sliderIndex) >= widthTotalItem) {
+            $(".direct-next").attr("style", "display: none;");
+        }
+    });  
+}
+
+function disableBtnBackFL() {
+    $(document).ready(function(){
+        if (sliderIndex === 0) {
+            $(".direct-back").attr("style", "display: none");
+        }
+    });  
+}
+
+function enableBtnNextFL() {
+    $(document).ready(function(){
+        $(".direct-next").removeAttr('style');
+    });
+}
+
+function enableBtnBackFL() {
+    $(document).ready(function(){
+        $(".direct-back").removeAttr('style');
+    });
+}
+
+function getTotalWidthItemFL() {
+    return $(".card-container").length * 244;
 }

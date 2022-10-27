@@ -10,6 +10,7 @@ import { MenuBannerComponent } from './menu-index-page/menu-banner/menu-banner.c
 import { MenuIconComponent } from './menu-index-page/menu-icon/menu-icon.component';
 import { MenuFlashSaleComponent } from './menu-index-page/menu-flash-sale/menu-flash-sale.component';
 import { CardItemComponent } from './card-item/card-item.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CardItemComponent } from './card-item/card-item.component';
     CardItemComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
