@@ -8,6 +8,7 @@ import { ItemInfo } from '../class/models/ItemInfo';
 })
 export class CardItemComponent implements OnInit {
   @Input() product: ItemInfo;
+  @Input() idEvent: number;
 
   constructor() { }
 

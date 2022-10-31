@@ -48,6 +48,7 @@ function changeImage() {
     });
 }
 
+
 $(document).ready(function(){
     $('#btn-next').on('click', function(event) {
         nextImage();
@@ -59,13 +60,17 @@ $(document).ready(function(){
         delayInterval();
     });
 
-    $('#btn-back-fl').on('click', function(event) {
+    $('#btn-back-event').on('click', function(event) {
         backEventFL();
     });
 
-    $('#btn-next-fl').on('click', function(event) {
-        nextEventFL();
+    $('.btn-next-event').on('click', function(event) {
+        //console.log($('.btn-next-event').attr('aria-label'));
+        //console.log($(this).attr('aria-label'));
+        const idEvent = $(this).attr('aria-label')
+        nextEventFL(idEvent);
     });
+    
 
     $('.carousel-number').on('click', '.carousel-item-img', function() {
         let index = $(this).index('.carousel-item-img');
@@ -121,24 +126,26 @@ function resizeIconContainer(width) {
     }
 }
 
-function nextEventFL() {
+function nextEventFL(id) {
     sliderIndex += 244;
-    $(".fl-body-grid").attr("style", `transform: translate3d(-${sliderIndex}px, 0, 0)`);
+    $(".event-body-grid-fl").attr("style", `transform: translate3d(-${sliderIndex}px, 0, 0)`);
     enableBtnBackFL();
-    disableBtnNextFL();
+    disableBtnNextFL(id);
+    
+    console.log("demo");
 }
 
 function backEventFL() {
     sliderIndex -= 244;
-    $(".fl-body-grid").attr("style", `transform: translate3d(-${sliderIndex}px, 0, 0)`);
+    $(".event-body-grid-fl").attr("style", `transform: translate3d(-${sliderIndex}px, 0, 0)`);
     enableBtnNextFL();
     disableBtnBackFL();
 }
 
-function disableBtnNextFL() {
+function disableBtnNextFL(id) {
     $(document).ready(function(){
         let widthCommonContainer = $(".common-container").width();
-        let widthTotalItem = getTotalWidthItemFL();
+        let widthTotalItem = getTotalWidthItemFL(id);
         
         if (((widthCommonContainer + sliderIndex) >= widthTotalItem) || (widthTotalItem == 0)) {
             $(".direct-next").attr("style", "display: none;");
@@ -166,8 +173,8 @@ function enableBtnBackFL() {
     });
 }
 
-function getTotalWidthItemFL() {
-    return $(".card-container").length * 244;
+function getTotalWidthItemFL(id) {
+    return $("#card-container-" + id).length * 244;
 }
 
 function getTimeEvent() {

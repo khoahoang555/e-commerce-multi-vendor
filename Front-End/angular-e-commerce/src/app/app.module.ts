@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { MenuEventsComponent } from './menu-index-page/menu-events/menu-events.component';
 import { EventHeaderComponent } from './menu-index-page/menu-events/event-header/event-header.component';
 import { EventDirectionComponent } from './menu-index-page/menu-events/event-direction/event-direction.component';
+import { EventBodyComponent } from './menu-index-page/menu-events/event-body/event-body.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { EventDirectionComponent } from './menu-index-page/menu-events/event-dir
     MenuEventsComponent,
     EventHeaderComponent,
     EventDirectionComponent,
+    EventBodyComponent,
   ],
   imports: [
     BrowserModule,

@@ -38,3 +38,12 @@
         }
     }
 }
+
+::ng-deep {
+    .direct-back:hover {
+        opacity: 1 !important;
+    }
+    .direct-next:hover {
+        opacity: 1 !important;
+    }
+}

@@ -2,16 +2,8 @@
     <div class="event-container">
         <app-event-header [itemEvent]="itemEvent"></app-event-header>
 
-        <app-event-direction *ngIf="itemEvent.type == 1"></app-event-direction>
+        <app-event-direction *ngIf="itemEvent.type == 1" [idEvent]="itemEvent.id"></app-event-direction>
 
-        <!-- <div class="event-body">
-            <div class="event-body-container">
-                <div class="event-body-grid">
-                </div>
-            </div>
-            <div class="event-body-btn">
-                <button class="body-btn">Xem thêm</button>
-            </div>
-        </div> -->
+        <app-event-body [arrItem]="arrDemo" [type]="itemEvent.type" [idEvent]="itemEvent.id"></app-event-body>
     </div>
 </div>

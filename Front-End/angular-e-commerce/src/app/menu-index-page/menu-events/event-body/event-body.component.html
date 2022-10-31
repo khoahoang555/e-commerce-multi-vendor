@@ -1,0 +1,21 @@
+<div class="event-body">
+    <div class="event-body-container-fl" *ngIf="type == 1; else elseType">
+        <div class="event-body-grid-fl">
+            <app-card-item *ngFor="let item of arrItem;" [product]="item" [idEvent]="idEvent"></app-card-item>
+        </div>
+    </div>
+    <div class="event-body-btn-fl" *ngIf="type == 1">
+        <button class="body-btn-fl">Xem thêm</button>
+    </div>
+       
+    <ng-template #elseType>
+        <div class="event-body-container" >
+            <div class="event-body-grid">
+                <app-card-item *ngFor="let item of arrItem" [product]="item"></app-card-item>
+            </div>
+        </div>
+        <div class="event-body-btn">
+            <button class="body-btn">Xem thêm</button>
+        </div>
+    </ng-template>
+</div>
