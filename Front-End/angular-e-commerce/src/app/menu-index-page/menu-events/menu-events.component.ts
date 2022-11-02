@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { ItemEvent } from 'src/app/class/models/ItemEvent';
 import { ItemInfo } from 'src/app/class/models/ItemInfo';
 
@@ -7,13 +7,16 @@ import { ItemInfo } from 'src/app/class/models/ItemInfo';
   templateUrl: './menu-events.component.html',
   styleUrls: ['./menu-events.component.scss']
 })
-export class MenuEventsComponent implements OnInit {
+export class MenuEventsComponent implements OnInit, AfterViewInit {
   @Input() itemEvent: ItemEvent;
   arrDemo: ItemInfo[] = [];
+  widthItemChanged: number = 0;
+  @ViewChild('container') container: ElementRef;
 
   constructor() { }
 
   ngOnInit(): void {
+    
     this.arrDemo = [
       new ItemInfo(
         'Komi - Nữ Thần Sợ Giao Tiếp - Tập 14 - Tặng Kèm Photostrip', 26600, 3, 14, 11, 4
@@ -45,4 +48,11 @@ export class MenuEventsComponent implements OnInit {
     ];
   }
 
+  ngAfterViewInit(): void {
+    console.log(this.container.nativeElement.offsetWidth);
+  }
+
+  itemChanged(sliderIndex: number) {
+    this.widthItemChanged = sliderIndex;
+  }
 }

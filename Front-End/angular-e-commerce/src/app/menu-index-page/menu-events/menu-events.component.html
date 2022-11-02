@@ -1,9 +1,9 @@
-<div class="common-container">
+<div #container class="common-container">
     <div class="event-container">
         <app-event-header [itemEvent]="itemEvent"></app-event-header>
 
-        <app-event-direction *ngIf="itemEvent.type == 1" [idEvent]="itemEvent.id"></app-event-direction>
+        <app-event-direction *ngIf="itemEvent.type == 1" [lengthItem]="arrDemo.length" (sliderIndexChanged)="itemChanged($event)"></app-event-direction>
 
-        <app-event-body [arrItem]="arrDemo" [type]="itemEvent.type" [idEvent]="itemEvent.id"></app-event-body>
+        <app-event-body [arrItem]="arrDemo" [type]="itemEvent.type" [widthItemChanged]="widthItemChanged"></app-event-body>
     </div>
 </div>

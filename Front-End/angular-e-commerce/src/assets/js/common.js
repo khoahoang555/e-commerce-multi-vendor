@@ -60,16 +60,16 @@ $(document).ready(function(){
         delayInterval();
     });
 
-    $('#btn-back-event').on('click', function(event) {
-        backEventFL();
-    });
+    // $('#btn-back-event').on('click', function(event) {
+    //     backEventFL();
+    // });
 
-    $('.btn-next-event').on('click', function(event) {
-        //console.log($('.btn-next-event').attr('aria-label'));
-        //console.log($(this).attr('aria-label'));
-        const idEvent = $(this).attr('aria-label')
-        nextEventFL(idEvent);
-    });
+    // $('.btn-next-event').on('click', function(event) {
+    //     //console.log($('.btn-next-event').attr('aria-label'));
+    //     //console.log($(this).attr('aria-label'));
+    //     const idEvent = $(this).attr('aria-label')
+    //     nextEventFL(idEvent);
+    // });
     
 
     $('.carousel-number').on('click', '.carousel-item-img', function() {
@@ -100,8 +100,8 @@ window.addEventListener('load', function () {
     let width = Math.min(document.documentElement.clientWidth, window.innerWidth || 0);
     resizeBanner(width);
     resizeIconContainer(width);
-    disableBtnBackFL();
-    disableBtnNextFL();
+    //disableBtnBackFL();
+    //disableBtnNextFL();
 });
 
 function resizeBanner(width) {

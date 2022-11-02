@@ -1,7 +1,7 @@
 <div class="event-body">
     <div class="event-body-container-fl" *ngIf="type == 1; else elseType">
-        <div class="event-body-grid-fl">
-            <app-card-item *ngFor="let item of arrItem;" [product]="item" [idEvent]="idEvent"></app-card-item>
+        <div class="event-body-grid-fl" [style.transform]="'translate3d(-' + widthItemChanged + 'px, 0, 0)'">
+            <app-card-item *ngFor="let item of arrItem;" [product]="item"></app-card-item>
         </div>
     </div>
     <div class="event-body-btn-fl" *ngIf="type == 1">

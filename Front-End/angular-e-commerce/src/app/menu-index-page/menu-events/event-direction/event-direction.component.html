@@ -1,11 +1,11 @@
 <div class="event-direction">
-    <div class="direct-back">
-        <a class="btn-back-event" [attr.aria-label]="idEvent">
+    <div class="direct-back" [style.display]="enableBtnBack ? 'block':'none'">
+        <a class="btn-back-event" (click)="backItemEvent()">
             <img src="assets/image/common/icon/fa-angle-left_32_8_8e8c8c_none.png" alt="">
         </a>
     </div>
-    <div class="direct-next">
-        <a class="btn-next-event" [attr.aria-label]="idEvent">
+    <div class="direct-next" [style.display]="enableBtnNext ? 'block':'none'">
+        <a class="btn-next-event" (click)="nextItemEvent()">
             <img src="assets/image/common/icon/fa-angle-right_32_8_8e8c8c_none.png" alt="">
         </a>
     </div>
