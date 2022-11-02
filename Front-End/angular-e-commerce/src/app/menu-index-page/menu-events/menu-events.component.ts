@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ItemEvent } from 'src/app/class/models/ItemEvent';
 import { ItemInfo } from 'src/app/class/models/ItemInfo';
 
@@ -7,11 +7,10 @@ import { ItemInfo } from 'src/app/class/models/ItemInfo';
   templateUrl: './menu-events.component.html',
   styleUrls: ['./menu-events.component.scss']
 })
-export class MenuEventsComponent implements OnInit, AfterViewInit {
+export class MenuEventsComponent implements OnInit {
   @Input() itemEvent: ItemEvent;
   arrDemo: ItemInfo[] = [];
   widthItemChanged: number = 0;
-  @ViewChild('container') container: ElementRef;
 
   constructor() { }
 
@@ -34,22 +33,21 @@ export class MenuEventsComponent implements OnInit, AfterViewInit {
         'Kaguya-Sama: Cuộc Chiến Tỏ Tình - Tập 3 - Tặng Kèm 1 Trong 2 Mẫu Thẻ Học Sinh', 61000, 4, 11, 25, 10, 11, 71000
       ),
       new ItemInfo(
-        'Thám Tử Lừng Danh Conan - Tập 99', 33000, 2, 3, 11, 5, 15, 50000
+        'Thám Tử Lừng Danh Conan 1 - Tập 99', 33000, 2, 3, 11, 5, 15, 50000
       ),
       new ItemInfo(
-        'Thám Tử Lừng Danh Conan - Tập 99', 33000, 2, 3, 11, 5, 15, 50000
+        'Thám Tử Lừng Danh Conan 2 - Tập 99', 33000, 2, 3, 11, 5, 15, 50000
       ),
       new ItemInfo(
-        'Thám Tử Lừng Danh Conan - Tập 99', 33000, 2, 3, 11, 5, 15, 50000
+        'Thám Tử Lừng Danh Conan 3 - Tập 99', 33000, 2, 3, 11, 5, 15, 50000
       ),
       new ItemInfo(
-        'Thám Tử Lừng Danh Conan - Tập 99', 33000, 2, 3, 11, 5, 15, 50000
+        'Thám Tử Lừng Danh Conan 4 - Tập 99', 33000, 2, 3, 11, 5, 15, 50000
+      ),
+      new ItemInfo(
+        'Thám Tử Lừng Danh Conan 5 - Tập 99', 33000, 2, 3, 11, 5, 15, 50000
       )
     ];
-  }
-
-  ngAfterViewInit(): void {
-    console.log(this.container.nativeElement.offsetWidth);
   }
 
   itemChanged(sliderIndex: number) {

@@ -19,6 +19,8 @@ export class EventDirectionComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.disableBtnNextEvent();
+    this.disableBtnBackEvent();
   }
 
   nextItemEvent() {
@@ -31,6 +33,8 @@ export class EventDirectionComponent implements OnInit {
   backItemEvent() {
     this.sliderIndex -= 244;
     this.sliderIndexChanged.emit(this.sliderIndex);
+    this.enableBtnNextEvent();
+    this.disableBtnBackEvent();
   }
 
   enableBtnBackEvent() {
@@ -38,14 +42,22 @@ export class EventDirectionComponent implements OnInit {
   }
   
   disableBtnNextEvent() {
-   
+    const container = <HTMLElement>document.querySelector('.common-container');
+    const widthContainer = container.offsetWidth;
+    let widthTotalItem = this.lengthItem * 244;
+        
+    if (((widthContainer + this.sliderIndex) >= widthTotalItem) || (widthTotalItem == 0)) {
+        this.enableBtnNext = false;
+    }
   }
 
   enableBtnNextEvent() {
-
+    this.enableBtnNext = true;
   }
   
   disableBtnBackEvent() {
-
+    if (this.sliderIndex === 0) {
+      this.enableBtnBack = false;
+    }
   }
 }

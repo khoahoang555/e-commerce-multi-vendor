@@ -126,56 +126,56 @@ function resizeIconContainer(width) {
     }
 }
 
-function nextEventFL(id) {
-    sliderIndex += 244;
-    $(".event-body-grid-fl").attr("style", `transform: translate3d(-${sliderIndex}px, 0, 0)`);
-    enableBtnBackFL();
-    disableBtnNextFL(id);
+// function nextEventFL(id) {
+//     sliderIndex += 244;
+//     $(".event-body-grid-fl").attr("style", `transform: translate3d(-${sliderIndex}px, 0, 0)`);
+//     enableBtnBackFL();
+//     disableBtnNextFL(id);
     
-    console.log("demo");
-}
+//     console.log("demo");
+// }
 
-function backEventFL() {
-    sliderIndex -= 244;
-    $(".event-body-grid-fl").attr("style", `transform: translate3d(-${sliderIndex}px, 0, 0)`);
-    enableBtnNextFL();
-    disableBtnBackFL();
-}
+// function backEventFL() {
+//     sliderIndex -= 244;
+//     $(".event-body-grid-fl").attr("style", `transform: translate3d(-${sliderIndex}px, 0, 0)`);
+//     enableBtnNextFL();
+//     disableBtnBackFL();
+// }
 
-function disableBtnNextFL(id) {
-    $(document).ready(function(){
-        let widthCommonContainer = $(".common-container").width();
-        let widthTotalItem = getTotalWidthItemFL(id);
+// function disableBtnNextFL(id) {
+//     $(document).ready(function(){
+//         let widthCommonContainer = $(".common-container").width();
+//         let widthTotalItem = getTotalWidthItemFL(id);
         
-        if (((widthCommonContainer + sliderIndex) >= widthTotalItem) || (widthTotalItem == 0)) {
-            $(".direct-next").attr("style", "display: none;");
-        }
-    });  
-}
+//         if (((widthCommonContainer + sliderIndex) >= widthTotalItem) || (widthTotalItem == 0)) {
+//             $(".direct-next").attr("style", "display: none;");
+//         }
+//     });  
+// }
 
-function disableBtnBackFL() {
-    $(document).ready(function(){
-        if (sliderIndex === 0) {
-            $(".direct-back").attr("style", "display: none");
-        }
-    });  
-}
+// function disableBtnBackFL() {
+//     $(document).ready(function(){
+//         if (sliderIndex === 0) {
+//             $(".direct-back").attr("style", "display: none");
+//         }
+//     });  
+// }
 
-function enableBtnNextFL() {
-    $(document).ready(function(){
-        $(".direct-next").removeAttr('style');
-    });
-}
+// function enableBtnNextFL() {
+//     $(document).ready(function(){
+//         $(".direct-next").removeAttr('style');
+//     });
+// }
 
-function enableBtnBackFL() {
-    $(document).ready(function(){
-        $(".direct-back").removeAttr('style');
-    });
-}
+// function enableBtnBackFL() {
+//     $(document).ready(function(){
+//         $(".direct-back").removeAttr('style');
+//     });
+// }
 
-function getTotalWidthItemFL(id) {
-    return $("#card-container-" + id).length * 244;
-}
+// function getTotalWidthItemFL(id) {
+//     return $("#card-container-" + id).length * 244;
+// }
 
 function getTimeEvent() {
     $(document).ready(function(){

@@ -15,6 +15,7 @@ import { MenuEventsComponent } from './menu-index-page/menu-events/menu-events.c
 import { EventHeaderComponent } from './menu-index-page/menu-events/event-header/event-header.component';
 import { EventDirectionComponent } from './menu-index-page/menu-events/event-direction/event-direction.component';
 import { EventBodyComponent } from './menu-index-page/menu-events/event-body/event-body.component';
+import { MenuFooterComponent } from './menu-footer/menu-footer.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { EventBodyComponent } from './menu-index-page/menu-events/event-body/eve
     EventHeaderComponent,
     EventDirectionComponent,
     EventBodyComponent,
+    MenuFooterComponent,
   ],
   imports: [
     BrowserModule,
