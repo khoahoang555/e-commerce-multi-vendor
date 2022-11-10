@@ -97,6 +97,7 @@
             width: 100%;
             flex-flow: row wrap;
             .main-content {
+                height: 200px;
                 .title {
                     font-weight: bold;
                     margin-bottom: 10px;
@@ -113,6 +114,22 @@
             }
             .sub-content {
                 width: 743px;
+                .title {
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+                .text-container {
+                    display: flex;
+                }
+            }
+            .list-icon-post {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    width: 100px;
+                    margin-right: 85px;
+                }
             }
         }
     }
@@ -124,6 +141,12 @@
     }
     .mr-50 {
         margin-right: 50px;
+    }
+    .mr-100 {
+        margin-right: 100px;
+    }
+    .mr-80 {
+        margin-right: 80px;
     }
      
     .text:hover {
