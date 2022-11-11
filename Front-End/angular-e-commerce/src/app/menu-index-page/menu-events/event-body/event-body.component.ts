@@ -1,11 +1,12 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import { ItemInfo } from 'src/app/class/models/ItemInfo';
 import * as $ from 'jquery';
 
 @Component({
   selector: 'app-event-body',
   templateUrl: './event-body.component.html',
-  styleUrls: ['./event-body.component.scss']
+  styleUrls: ['./event-body.component.scss'],
+  // encapsulation: ViewEncapsulation.None
 })
 export class EventBodyComponent implements OnInit {
   @Input() type: number;

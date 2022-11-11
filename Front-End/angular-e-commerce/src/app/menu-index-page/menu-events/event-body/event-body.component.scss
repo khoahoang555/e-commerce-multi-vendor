@@ -12,9 +12,10 @@
     } 
     .event-body-container {
         width: 100%;
-        .event-body-grid {
+        ::ng-deep .event-body-grid {
             display: flex;
             flex-flow: row wrap;
+            justify-content: center;
         }
     }     
     .event-body-btn {
@@ -70,3 +71,79 @@
         box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     }
 }
+
+.event-body-grid .card-container {
+    width: 153px !important;
+    .card-item {
+        .card-item-img {
+            height: 109px !important;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    
+        .event-body-grid .card-container {
+            width: 153px !important;
+            .card-item {
+                .card-item-img {
+                    height: 109px !important;
+                }
+            }
+        }
+        .card-item-name {
+            a {
+                width: 131px !important;
+                height: 35px !important;
+                font-size: 13px !important;
+            }
+        }
+        .card-item-price {
+            .item-price {
+                span {
+                    font-size: 15px !important;
+                }
+            }
+        }
+        .item-stock {
+            width: 38px !important;
+            height: 24px !important;
+            span {
+                font-size: 11px !important;
+            }
+        }
+        .card-item-price-stock {
+            span {
+                font-size: 12px !important;
+            }
+        }
+        .card-item-rating {
+            .item-img {
+                width: 14px !important;
+                height: 14px !important;
+            }
+            .item-total {
+                span {
+                    font-size: 12px !important;
+                    line-height: 12px !important;
+                }
+            }
+        }
+        .card-item-progress {
+            height: 14px !important;
+            .item-progress {
+                height: 14px !important;
+            }
+            .item-text {
+                font-size: 10px !important;
+                line-height: 10px !important;
+            }
+        }
+    
+}
+
+
+
+
+
