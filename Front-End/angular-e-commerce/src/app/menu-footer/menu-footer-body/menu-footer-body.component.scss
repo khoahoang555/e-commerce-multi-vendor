@@ -1,0 +1,63 @@
+.footer-body {
+    background-color: #ffffff;
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    padding: 40px 0 50px;
+    flex-flow: row wrap;
+    justify-content: center;
+    .fb-main-text {
+        // width: 250px;
+        padding: 10px;
+        .fb-title {
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+        .fb-content {
+            display: flex;
+            flex-flow: row wrap;
+            .text {
+                a {
+                    text-decoration: none;
+                    color: rgba(0,0,0,.65);
+                    font-size: 12px;                     
+                    margin-bottom: 8px;
+                    width: 230px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1; /* after 1 line show ... */
+                    -webkit-box-orient: vertical;
+                }
+            }
+            .image {
+                box-shadow: 0 1px 1px rgb(0 0 0 / 20%);
+                margin: 0px 8px 8px 0px;
+                border-radius: 2px;
+                img {
+                    padding-bottom: 3px;         
+                }
+            }
+        }
+    }
+}
+
+::ng-deep {
+    .text:hover {
+        a {
+            color: #ea76b1 !important;
+        }
+    }
+    .mt-12 {
+        margin-top: 12px;
+    }
+    .pr-5 {
+        padding-right: 5px;
+    }
+    .w-230 {
+        width: 230px;
+    }
+    .w-200 {
+        width: 184px;
+    }
+}
