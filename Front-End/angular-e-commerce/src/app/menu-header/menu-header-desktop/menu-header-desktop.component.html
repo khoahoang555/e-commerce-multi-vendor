@@ -10,35 +10,24 @@
                     <img src="assets/image/header/icon/icon_seemore_gray.svg" alt="icon">
                 </div>          
             </div>
-            <div class="header-search">
-                <form action="">
-                    <div class="search-container">
-                        <input type="text" placeholder="Tìm kiếm sản phẩm mong muốn...">
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                    </div>
-                </form>
-            </div>
+            <app-search-item></app-search-item>
             <div class="header-main-functions">
-                <div class="header-main-item">
-                    <img src="assets/image/header/icon/ico_noti_gray.svg" alt="icon">
-                    <span>Thông Báo</span>
-                </div>
+                <app-popup-notification></app-popup-notification>
                 <div class="header-main-item">
                     <img src="assets/image/header/icon/ico_cart_gray.svg" alt="icon">
                     <span>Giỏ Hàng</span>
                 </div>
-                <div class="header-main-item">
-                    <img src="assets/image/header/icon/ico_account_gray.svg" alt="icon">
-                    <span>Tài Khoản</span>
-                </div>
-                <div class="header-main-item">
+                <app-popup-account></app-popup-account>
+                <!-- <div class="header-main-item">
                     <div class="language-container">
                         <div class="image-item">
                             <img src="assets/image/header/icon/default.svg" alt="icon">
                             <img src="assets/image/header/icon/icon_seemore_gray.svg" class="ms-1" alt="icon">
                         </div>                       
                     </div>                    
-                </div>
+                </div> -->
+                <app-popup-choose-language></app-popup-choose-language>
+                
             </div>           
         </div>
     </div>

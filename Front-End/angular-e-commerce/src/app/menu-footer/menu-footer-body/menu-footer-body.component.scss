@@ -57,7 +57,23 @@
     .w-230 {
         width: 230px;
     }
-    .w-200 {
+    .w-184 {
         width: 184px;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .w-230 {
+        width: 200px !important;
+    }
+    .fb-content {
+        .text {
+            a {
+                width: 200px !important;
+            }
+        }
+    }
+    .w-184 {
+        width: 200px !important;
     }
 }

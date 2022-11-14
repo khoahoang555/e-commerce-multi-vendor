@@ -1,0 +1,102 @@
+.item-container-dropdown {
+    position: relative;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    cursor: pointer;
+    .main-item {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        width: 72px;
+        align-items: center;                   
+        span {
+            font-size: 15px;
+        }
+    }
+    .item-notification-dropdown {
+        display: none;
+        position: absolute;
+        right: 0;
+        bottom: 0%;
+        transform: translate(0, 100%);
+        width: 264px;
+        z-index: 999;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+        .item-notification-title {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 500;
+            img {
+                width: 16px;
+                height: 16px;
+                margin-right: 10px;
+            }
+        }
+        .item-notification-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 35px 35px 15px;
+            text-align: center;
+            span {
+                margin-top: 10px;
+            }
+            img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        .item-notification-btn {
+            display: flex;
+            padding: 10px;
+            flex-direction: column;
+            .btn-login {
+                background-color: #C92127;
+                border: #C92127;
+                border-radius: 10px;
+                color: #ffffff;
+                height: 40px;
+                font-weight: 500;
+            }
+            .btn-register {
+                background-color: #ffffff;
+                border: 2px solid #C92127;
+                border-radius: 10px;
+                color: #C92127;
+                height: 40px;
+                font-weight: 500;
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
+:host::ng-deep .item-container-dropdown:hover .item-notification-dropdown {
+    display: block !important;
+}
+
+@media only screen and (max-width: 1320px) {
+    .main-item {
+        margin-left: 10px !important;
+        width: 64px !important;
+        span {
+            font-size: 13px !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 1270px) {
+    .main-item {
+        margin-left: 5px !important;
+        width: 64px !important;
+        span {
+            font-size: 13px !important;
+        }
+    }
+}

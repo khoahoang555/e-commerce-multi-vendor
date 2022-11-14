@@ -18,6 +18,10 @@ import { EventBodyComponent } from './menu-index-page/menu-events/event-body/eve
 import { MenuFooterComponent } from './menu-footer/menu-footer.component';
 import { MenuFooterHeaderComponent } from './menu-footer/menu-footer-header/menu-footer-header.component';
 import { MenuFooterBodyComponent } from './menu-footer/menu-footer-body/menu-footer-body.component';
+import { PopupNotificationComponent } from './menu-header/menu-header-desktop/popup-notification/popup-notification.component';
+import { SearchItemComponent } from './menu-header/menu-header-desktop/search-item/search-item.component';
+import { PopupAccountComponent } from './menu-header/menu-header-desktop/popup-account/popup-account.component';
+import { PopupChooseLanguageComponent } from './menu-header/menu-header-desktop/popup-choose-language/popup-choose-language.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +41,10 @@ import { MenuFooterBodyComponent } from './menu-footer/menu-footer-body/menu-foo
     MenuFooterComponent,
     MenuFooterHeaderComponent,
     MenuFooterBodyComponent,
+    PopupNotificationComponent,
+    SearchItemComponent,
+    PopupAccountComponent,
+    PopupChooseLanguageComponent,
   ],
   imports: [
     BrowserModule,

@@ -16,40 +16,25 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                height: 40px;
+                height: 68px;
                 margin-left: 20px;
                 .header-main-item {
                     display: flex;
                     flex-direction: column;
                     margin-left: 10px;
                     width: 72px;
-                    align-items: center;
+                    align-items: center;  
+                    cursor: pointer;                 
                     span {
                         font-size: 15px;
-                    }
-
-                    .language-container {
-                        display: block;
-                        position: relative;
-                        height: 40px;
-                        border: 1px solid #808080;
-                        width: 70px;
-                        border-radius: 10px;
-                        .image-item {
-                            top: 50%;
-                            left: 50%;
-                            position: absolute;
-                            transform: translate(-50%, -50%);
-                            display: flex;
-                        }
-                    }
+                    }                
                 }
             }
 
             .header-category {             
                 .category-item {
                     display: flex;
-                    //justify-content: end;
+                    justify-content: end;
                     -webkit-justify-content: end;
                     width: 90px;
                     margin-right: 5px;
@@ -57,36 +42,6 @@
             }
         }
     }
-}
-
-::ng-deep {
-    .search-container {
-        width: 566px;
-        border: 1px solid #808080;
-        border-radius: 10px;
-        height: 40px;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-
-        input {
-            height: 20px;
-            margin-left: 15px;
-            width: 472px;
-            border: none !important;
-            outline: none;
-        }
-
-        button {
-            height: 30px;
-            width: 70px;
-            border: none;
-            background-color: #C92127;
-            border-radius: 10px;
-            color: #ffffff;
-        }
-    }
-    
 }
 
 @media only screen and (max-width: 1320px) {
@@ -118,12 +73,5 @@
     }
     .category-item {
         width: 70px !important;
-    }
-
-    .search-container {
-        width: 380px !important;
-        input {
-            width: 285px !important;
-        }
     }
 }

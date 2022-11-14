@@ -18,13 +18,7 @@ export class MenuIndexPageComponent implements OnInit {
       ),
       new ItemEvent(
         2, 'XU HƯỚNG MUA SẮM', 2, 'assets/image/common/trending/ico_dealhot.png'
-      ),
-      new ItemEvent(
-        3, 'Demo', 1, 'assets/image/common/flash-sale/ico_flashsale@3x.png', '2022-10-28 15:30:27'
-      ),
-      // new ItemEvent(
-      //   'Gợi Ý Hôm Nay', 3
-      // )
+      )
     ]
   }
 

@@ -81,10 +81,10 @@
     }
 }
 
-
-@media only screen and (max-width: 500px) {
+:host::ng-deep .event-body-grid {
+    @media only screen and (min-width: 336px) and (max-width: 500px) {
     
-        .event-body-grid .card-container {
+        .card-container {
             width: 153px !important;
             .card-item {
                 .card-item-img {
@@ -141,7 +141,68 @@
             }
         }
     
+    }
+
+    // @media only screen and (min-width: 500px) {
+    //     .card-container {
+    //         width: 153px !important;
+    //         .card-item {
+    //             .card-item-img {
+    //                 height: 109px !important;
+    //             }
+    //         }
+    //     }
+    //     .card-item-name {
+    //         a {
+    //             width: 131px !important;
+    //             height: 35px !important;
+    //             font-size: 13px !important;
+    //         }
+    //     }
+    //     .card-item-price {
+    //         .item-price {
+    //             span {
+    //                 font-size: 15px !important;
+    //             }
+    //         }
+    //     }
+    //     .item-stock {
+    //         width: 38px !important;
+    //         height: 24px !important;
+    //         span {
+    //             font-size: 11px !important;
+    //         }
+    //     }
+    //     .card-item-price-stock {
+    //         span {
+    //             font-size: 12px !important;
+    //         }
+    //     }
+    //     .card-item-rating {
+    //         .item-img {
+    //             width: 14px !important;
+    //             height: 14px !important;
+    //         }
+    //         .item-total {
+    //             span {
+    //                 font-size: 12px !important;
+    //                 line-height: 12px !important;
+    //             }
+    //         }
+    //     }
+    //     .card-item-progress {
+    //         height: 14px !important;
+    //         .item-progress {
+    //             height: 14px !important;
+    //         }
+    //         .item-text {
+    //             font-size: 10px !important;
+    //             line-height: 10px !important;
+    //         }
+    //     }
+    // }
 }
+
 
 
 

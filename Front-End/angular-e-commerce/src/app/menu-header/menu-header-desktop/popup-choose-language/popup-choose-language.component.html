@@ -1,0 +1,24 @@
+<div class="item-container-dropdown">
+    <div class="main-item">
+        <div class="language-container">
+            <div class="image-item">
+                <img src="assets/image/header/icon/default.svg" alt="icon" width="34px" height="22px" *ngIf="languageChosen === 1">
+                <img src="assets/image/header/icon/english.svg" alt="icon" width="34px" height="22px" *ngIf="languageChosen === 2">
+                <img src="assets/image/header/icon/icon_seemore_gray.svg" class="ms-1" alt="icon">
+            </div>                       
+        </div>
+    </div>   
+    <div class="item-language-dropdown">
+        <div class="item-language-container">
+            <div class="item-language" [ngClass]="{'active': languageChosen === 1}" (click)="changeLanguage(1)">
+                <img src="assets/image/header/icon/default.svg" alt="">
+                <span>VN</span>
+            </div>
+            <div class="item-language" [ngClass]="{'active': languageChosen === 2}" (click)="changeLanguage(2)">
+                <img src="assets/image/header/icon/english.svg" alt="">
+                <span>EN</span>
+            </div>
+        </div>
+        
+    </div>
+</div>
