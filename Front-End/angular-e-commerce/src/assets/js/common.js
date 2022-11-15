@@ -50,6 +50,14 @@ function changeImage() {
 
 
 $(document).ready(function(){
+    $("#popup-category").mouseenter(function() {
+        $(".modal-page").css("display", "block");
+    });
+
+    $("#popup-category").mouseleave(function() {
+        $(".modal-page").css("display", "none");
+    });
+
     $('#btn-next').on('click', function(event) {
         nextImage();
         delayInterval();
