@@ -1,0 +1,88 @@
+<div class="popup-category-mobile" id="popup-category-mobile">
+    <div class="category-header-container">
+        <div class="category-header">
+            <div class="item-img" id="close-popup-category-mobile">
+                <img src="assets/image/common/popup/header/category/ico_arrow_line_white.svg" alt="">
+            </div>
+            <div class="item-text">
+                <span>Danh Mục Sản Phẩm</span>
+            </div>
+        </div>
+    </div>
+    <div class="category-body-container">      
+        <div class="category-title-container">
+            <div class="title-item-container" *ngFor="let category of listCategory" 
+                [ngClass]="category.id === activeCheck?'active':''" 
+                (click)="changeClassActive(category.id)"
+            >
+                <div class="separate-active"></div>
+                <div class="title-item">
+                    <img [src]="category.image" alt="">
+                    <span>{{category.title}}</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="category-main-container">
+            <a href="" class="item-main-default">
+                <span>TẤT CẢ SẢN PHẨM</span>
+                <img src="assets/image/common/popup/header/category/icon_seemore_gray.svg" alt="">
+            </a>
+            <div class="item-main-dropdown">
+                <div class="item-main" (click)="changeCategoryDropDown(1)" id="item-main-1">
+                    <span>VĂN HỌC</span>
+                    <img id="item-main-img-1" src="assets/image/common/popup/header/category/ico_triangle_gray_down.svg" alt="">
+                </div>
+                <div class="item-main-sub" id="item-main-sub-1">
+                    <a class="item-sub">
+                        <span href="">Tiểu Thuyết</span>
+                        <img class="image-rotate" src="assets/image/common/popup/header/category/icon_seemore_gray.svg" alt="">
+                    </a>
+                    <a class="item-sub">
+                        <span href="">Truyện Ngắn - Tản Văn</span>
+                        <img class="image-rotate" src="assets/image/common/popup/header/category/icon_seemore_gray.svg" alt="">
+                    </a>
+                    <a class="item-sub">
+                        <span href="">Light Novel</span>
+                        <img class="image-rotate" src="assets/image/common/popup/header/category/icon_seemore_gray.svg" alt="">
+                    </a>
+                    <a class="item-sub">
+                        <span href="">Ngôn Tình</span>
+                        <img class="image-rotate" src="assets/image/common/popup/header/category/icon_seemore_gray.svg" alt="">
+                    </a>
+                    <a class="item-sub">
+                        <span class="more" href="">Xem tất cả</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="item-main-dropdown">
+                <div class="item-main" (click)="changeCategoryDropDown(2)" id="item-main-2">
+                    <span>KINH TẾ</span>
+                    <img id="item-main-img-2" src="assets/image/common/popup/header/category/ico_triangle_gray_down.svg" alt="">
+                </div>
+                <div class="item-main-sub" id="item-main-sub-2">
+                    <a class="item-sub">
+                        <span href="">Tiểu Thuyết</span>
+                        <img class="image-rotate" src="assets/image/common/popup/header/category/icon_seemore_gray.svg" alt="">
+                    </a>
+                    <a class="item-sub">
+                        <span href="">Truyện Ngắn - Tản Văn</span>
+                        <img class="image-rotate" src="assets/image/common/popup/header/category/icon_seemore_gray.svg" alt="">
+                    </a>
+                    <a class="item-sub">
+                        <span href="">Light Novel</span>
+                        <img class="image-rotate" src="assets/image/common/popup/header/category/icon_seemore_gray.svg" alt="">
+                    </a>
+                    <a class="item-sub">
+                        <span href="">Ngôn Tình</span>
+                        <img class="image-rotate" src="assets/image/common/popup/header/category/icon_seemore_gray.svg" alt="">
+                    </a>
+                    <a class="item-sub">
+                        <span class="more" href="">Xem tất cả</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

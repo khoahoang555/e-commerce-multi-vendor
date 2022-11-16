@@ -1,0 +1,159 @@
+.popup-category-mobile {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: -100%;
+    background-color: #F2F4F5;
+    overflow-x: hidden;
+    transition: 0.5s;
+    .category-header-container {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 4;
+        .category-header {
+            position: relative;
+            height: 54px;
+            background-color: #C62128;
+            color: #ffffff;
+            
+            .item-img {
+                width: 54px;
+                height: 54px;
+                top: 0;
+                left: 0;
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: 0.3s;
+                img {
+                    width: 24px;
+                    height: 24px;
+                }        
+            }
+            .item-text {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                transition: 0.2s;
+                span {
+                    font-weight: bold;
+                    font-size: 18px;
+                }
+            }
+        }  
+    }
+    .category-body-container {
+        display: flex;
+        margin-top: 54px;
+        .category-title-container {
+            .title-item-container {
+                padding: 12px 5px 10px;
+                border-radius: 5px;
+                background-color: #ffffff;
+                margin-bottom: 3px;
+                .title-item {
+                    display: flex;
+                    flex-flow: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 83px;
+                    text-align: center;
+                    img {
+                        margin: 0px 0px 7px;
+                        width: 20px;
+                        height: 20px;
+                    }
+                    span {
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
+                }
+            }         
+        }
+        .category-main-container {
+            width: 100%;
+            .item-main-dropdown {
+                .show {
+                    display: block !important;
+                }
+                .item-main  {
+                    display: flex;
+                    width: 100%;
+                    background-color: #ffffff;
+                    font-size: 15px;
+                    font-weight: bold;
+                    padding: 10px;
+                    margin: 5px;
+                    border-radius: 5px;
+                    img {
+                        margin-left: auto;
+                    }
+                    
+                }
+                .item-main-sub {
+                    margin: -5px 5px 0px;
+                    width: 100%;
+                    border-radius: 0px 0px 5px 5px;
+                    display: none;
+                    .item-sub {
+                        display: flex;
+                        border-top: 1px solid #F2F4F5;
+                        width: 100%;
+                        background-color: #ffffff;
+                        font-size: 13px;
+                        padding: 10px;
+                        color: #000000;
+                        text-decoration: none;
+                        img {
+                            margin-left: auto;
+                            transform: rotate(-90deg);
+                        }
+                        .more {
+                            color: #3793f5;
+                        }
+                    }
+                }
+            }         
+        }
+    }
+}
+
+:host::ng-deep .item-main-default {
+    display: flex;
+    width: 100%;
+    background-color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #000000;
+    img {
+        margin-left: auto;
+        transform: rotate(-90deg);
+    }
+}
+
+:host::ng-deep .active {
+    position: relative;
+    color: #C62128;
+    font-weight: 700;
+    .separate-active {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3px;
+        background-color: #C62128;
+        height: 100%;
+    }
+}
+
+

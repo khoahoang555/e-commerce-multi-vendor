@@ -23,6 +23,7 @@ import { SearchItemComponent } from './menu-header/menu-header-desktop/search-it
 import { PopupAccountComponent } from './menu-header/menu-header-desktop/popup-account/popup-account.component';
 import { PopupChooseLanguageComponent } from './menu-header/menu-header-desktop/popup-choose-language/popup-choose-language.component';
 import { PopupCategoryComponent } from './menu-header/menu-header-desktop/popup-category/popup-category.component';
+import { PopupCategoryMobileComponent } from './menu-header/menu-header-mobile/popup-category-mobile/popup-category-mobile.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { PopupCategoryComponent } from './menu-header/menu-header-desktop/popup-
     PopupAccountComponent,
     PopupChooseLanguageComponent,
     PopupCategoryComponent,
+    PopupCategoryMobileComponent,
   ],
   imports: [
     BrowserModule,
