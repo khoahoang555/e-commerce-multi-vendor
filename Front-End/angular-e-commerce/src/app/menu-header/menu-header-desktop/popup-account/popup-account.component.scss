@@ -2,6 +2,7 @@
     position: relative;
     padding-bottom: 15px;
     padding-top: 15px;
+    z-index: 4;
     cursor: pointer;
     .main-item {
         display: flex;
@@ -20,7 +21,6 @@
         bottom: 0%;
         transform: translate(0, 100%);
         width: 264px;
-        z-index: 999;
         background-color: #ffffff;
         border-radius: 10px;
         box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;

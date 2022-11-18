@@ -24,6 +24,7 @@ import { PopupAccountComponent } from './menu-header/menu-header-desktop/popup-a
 import { PopupChooseLanguageComponent } from './menu-header/menu-header-desktop/popup-choose-language/popup-choose-language.component';
 import { PopupCategoryComponent } from './menu-header/menu-header-desktop/popup-category/popup-category.component';
 import { PopupCategoryMobileComponent } from './menu-header/menu-header-mobile/popup-category-mobile/popup-category-mobile.component';
+import { MenuAsideBarComponent } from './menu-aside-bar/menu-aside-bar.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { PopupCategoryMobileComponent } from './menu-header/menu-header-mobile/p
     PopupChooseLanguageComponent,
     PopupCategoryComponent,
     PopupCategoryMobileComponent,
+    MenuAsideBarComponent,
   ],
   imports: [
     BrowserModule,

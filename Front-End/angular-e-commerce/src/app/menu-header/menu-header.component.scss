@@ -6,6 +6,9 @@
         .header-container-mobile {
             display: block;
         }
+        .aside-bar-container {
+            display: none;
+        }
     }
     
     @media not screen and (max-width: 980px) {
@@ -14,6 +17,9 @@
         }
         .header-container-mobile {
             display: none;
+        }
+        .aside-bar-container {
+            display: block;
         }
     }
     
