@@ -18,54 +18,10 @@
             justify-content: center;
         }
     }     
-    .event-body-btn {
-        position: relative;
-        margin-top: 5px;
-        height: 70px;
-        .body-btn {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            width: 220px;
-            height: 44px;
-            border-radius: 10px;
-            //background: linear-gradient(90deg, rgba(255,152,0,1) 0%, rgba(247,105,93,1) 100%);
-            background: #ffffff;
-            //border: 3px solid #c92127;
-            border: 2px solid #c92127;
-            color: #c92127;
-            font-weight: bold;
-        }
-    }
-    .event-body-btn-fl {
-        position: relative;
-        margin-top: 5px;
-        height: 70px;
-        .body-btn-fl {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            width: 220px;
-            height: 44px;
-            border-radius: 20px;
-            background: linear-gradient(90deg, rgba(255,152,0,1) 0%, rgba(247,105,93,1) 100%);
-            //background: #ffffff;
-            //border: 3px solid #c92127;
-            border: none;
-            color: #ffffff;
-            font-weight: bold;
-        }
-    }
+    
 }
 
 ::ng-deep {
-    .body-btn:hover {
-        color: #ffffff !important;
-        background: #c92127 !important;
-        border: none !important;
-    }
     .body-btn-fl:hover {
         color: #ffffff !important;
         box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
@@ -142,65 +98,6 @@
         }
     
     }
-
-    // @media only screen and (min-width: 500px) {
-    //     .card-container {
-    //         width: 153px !important;
-    //         .card-item {
-    //             .card-item-img {
-    //                 height: 109px !important;
-    //             }
-    //         }
-    //     }
-    //     .card-item-name {
-    //         a {
-    //             width: 131px !important;
-    //             height: 35px !important;
-    //             font-size: 13px !important;
-    //         }
-    //     }
-    //     .card-item-price {
-    //         .item-price {
-    //             span {
-    //                 font-size: 15px !important;
-    //             }
-    //         }
-    //     }
-    //     .item-stock {
-    //         width: 38px !important;
-    //         height: 24px !important;
-    //         span {
-    //             font-size: 11px !important;
-    //         }
-    //     }
-    //     .card-item-price-stock {
-    //         span {
-    //             font-size: 12px !important;
-    //         }
-    //     }
-    //     .card-item-rating {
-    //         .item-img {
-    //             width: 14px !important;
-    //             height: 14px !important;
-    //         }
-    //         .item-total {
-    //             span {
-    //                 font-size: 12px !important;
-    //                 line-height: 12px !important;
-    //             }
-    //         }
-    //     }
-    //     .card-item-progress {
-    //         height: 14px !important;
-    //         .item-progress {
-    //             height: 14px !important;
-    //         }
-    //         .item-text {
-    //             font-size: 10px !important;
-    //             line-height: 10px !important;
-    //         }
-    //     }
-    // }
 }
 
 

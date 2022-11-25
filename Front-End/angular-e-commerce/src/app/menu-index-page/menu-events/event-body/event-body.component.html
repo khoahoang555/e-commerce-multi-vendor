@@ -4,9 +4,7 @@
             <app-card-item *ngFor="let item of arrItem;" [product]="item"></app-card-item>
         </div>
     </div>
-    <div class="event-body-btn-fl" *ngIf="type == 1">
-        <button class="body-btn-fl">Xem thêm</button>
-    </div>
+    <app-load-more-button *ngIf="type == 1" [type]="type"></app-load-more-button>
        
     <ng-template #elseType>
         <div class="event-body-container">
@@ -14,8 +12,6 @@
                 <app-card-item *ngFor="let item of arrItem" [product]="item"></app-card-item>
             </div>
         </div>
-        <div class="event-body-btn">
-            <button class="body-btn">Xem thêm</button>
-        </div>
+        <app-load-more-button [type]="type"></app-load-more-button>
     </ng-template>
 </div>

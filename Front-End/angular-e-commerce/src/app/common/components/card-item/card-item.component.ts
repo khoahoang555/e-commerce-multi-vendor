@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ItemInfo } from '../class/models/ItemInfo';
+import { ItemInfo } from '../../../class/models/ItemInfo';
 
 @Component({
   selector: 'app-card-item',

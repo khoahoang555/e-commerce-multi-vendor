@@ -8,8 +8,7 @@ import { MenuHeaderMobileComponent } from './menu-header/menu-header-mobile/menu
 import { MenuIndexPageComponent } from './menu-index-page/menu-index-page.component';
 import { MenuBannerComponent } from './menu-index-page/menu-banner/menu-banner.component';
 import { MenuIconComponent } from './menu-index-page/menu-icon/menu-icon.component';
-import { MenuFlashSaleComponent } from './menu-index-page/menu-flash-sale/menu-flash-sale.component';
-import { CardItemComponent } from './card-item/card-item.component';
+import { CardItemComponent } from './common/components/card-item/card-item.component';
 import { FormsModule } from '@angular/forms';
 import { MenuEventsComponent } from './menu-index-page/menu-events/menu-events.component';
 import { EventHeaderComponent } from './menu-index-page/menu-events/event-header/event-header.component';
@@ -25,6 +24,7 @@ import { PopupChooseLanguageComponent } from './menu-header/menu-header-desktop/
 import { PopupCategoryComponent } from './menu-header/menu-header-desktop/popup-category/popup-category.component';
 import { PopupCategoryMobileComponent } from './menu-header/menu-header-mobile/popup-category-mobile/popup-category-mobile.component';
 import { MenuAsideBarComponent } from './menu-aside-bar/menu-aside-bar.component';
+import { LoadMoreButtonComponent } from './common/components/load-more/load-more-button.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +35,6 @@ import { MenuAsideBarComponent } from './menu-aside-bar/menu-aside-bar.component
     MenuIndexPageComponent,
     MenuBannerComponent,
     MenuIconComponent,
-    MenuFlashSaleComponent,
     CardItemComponent,
     MenuEventsComponent,
     EventHeaderComponent,
@@ -51,6 +50,7 @@ import { MenuAsideBarComponent } from './menu-aside-bar/menu-aside-bar.component
     PopupCategoryComponent,
     PopupCategoryMobileComponent,
     MenuAsideBarComponent,
+    LoadMoreButtonComponent
   ],
   imports: [
     BrowserModule,
